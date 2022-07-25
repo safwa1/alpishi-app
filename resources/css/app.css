@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Baloo Bhaijaan 2', cursive !important;
+    /*user-select: none;*/
+    /*-moz-user-select: none;*/
+    /*-ms-user-select: none;*/
+    /*-webkit-user-select: none;*/
+}
+
+:root {
+    --text-opacity-on-primary: 0.8;
+    --brand-color: #0F6BA5;
+    --neutral-color: #889096;
+    --primary-color: #0072F5;
+    --secondary-color: #7828C8;
+    --success-color: #17C964;
+    --warning-color: #F5A524;
+    --error-color: #F31260;
+}
+
+html, body {
+    direction: rtl;
+}
+
+/*scrollbar*/
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #edf2f7
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 100vh;
+    border: 3px solid #edf2f7
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0
+}
