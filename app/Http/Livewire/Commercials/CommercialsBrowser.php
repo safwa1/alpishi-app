@@ -11,7 +11,7 @@ use Livewire\Component;
 
 class CommercialsBrowser extends Component
 {
-    public $allCommercials = [];
+    public $allCommercials;
 
     public function mount()
     {

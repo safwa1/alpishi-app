@@ -18,12 +18,14 @@
                         <x-table.row>
 
                             <x-table.cell class="px-4 py-1 text-sm">
+                                <div class="cursor-pointer w-10 h-10 overflow-hidden rounded-full hover:ring-2 ring-offset-1 hover:ring-gray-200 bg-gray-300">
                                 @if(isset($car['mediable']['path']))
                                     <img
-                                        class="cursor-pointer w-10 h-10 overflow-hidden rounded-full object-cover hover:ring-2 ring-offset-1 hover:ring-red-200"
+                                        class="w-full h-full object-cover"
                                         src="{{ \Illuminate\Support\Facades\Storage::url($car['mediable']['path']) }}"
                                         alt="car" />
                                 @endif
+                                </div>
                             </x-table.cell>
 
                             <x-table.cell>
@@ -123,10 +125,10 @@ $this->photo->storeAs('photos', 'avatar');
 // Store in the "photos" directory in a configured "s3" bucket with the filename "avatar.png".
 $this->photo->storeAs('photos', 'avatar', 's3');
 
-// Store in the "photos" directory, with "public" visibility in a configured "s3" bucket.
+// Store in the "photos" directory, with "Website" visibility in a configured "s3" bucket.
 $this->photo->storePublicly('photos', 's3');
 
-// Store in the "photos" directory, with the name "avatar.png", with "public" visibility in a configured "s3" bucket.
+// Store in the "photos" directory, with the name "avatar.png", with "Website" visibility in a configured "s3" bucket.
 $this->photo->storePubliclyAs('photos', 'avatar', 's3');
 
 --}}

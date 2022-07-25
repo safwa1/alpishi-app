@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Website;
 
 use App\Models\Commercial;
 use App\Models\Social;
@@ -10,10 +10,10 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
-class Home extends Component
+class Index extends Component
 {
-    public $allCommercials = [];
-    public $latestCommercials = [];
+    public $allCommercials;
+    public $latestCommercials;
     public ?string $phoneNumber = null;
 
     public function mount()
@@ -27,6 +27,6 @@ class Home extends Component
 
     public function render(): Factory|View|Application
     {
-        return view('livewire.home')->layout(HomeGuest::class);
+        return view('livewire.website.index')->layout(HomeGuest::class);
     }
 }

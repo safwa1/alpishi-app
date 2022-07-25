@@ -1,15 +1,14 @@
-@props([
-    'commercials' => []
-])
+@props(['commercials'])
 
 <x-container>
-    <section class="w-full min-h-[300px] overflow-hidden md:mb-2 mb-1 md:border-t-0 border-t">
+    <section class="w-full min-h-[30rem] overflow-hidden md:mb-2 mb-1 md:border-t-0 border-t">
 
         <div class="px-4 !font-noto md:py-8 pt-6 pb-3 md:text-2xl text-xl font-bold text-neutral-700 text-center">
             قائمة السيارات
         </div>
 
-        @if($commercials)
+        @if(isset($commercials) && count($commercials) > 0)
+
             <!-- inner container -->
             <div class="md:px-16 px-5">
 
@@ -26,6 +25,7 @@
                             :price="$commercial->price"
                             :release-date="$commercial->getCarReleaseDate()"
                             :location="$commercial->location"
+                            :sold="$commercial->sold"
                         />
                     @endforeach
 
@@ -45,12 +45,9 @@
                 </div>
 
             </div>
+        @else
+            <x-commercial.empty  />
         @endif
-
-        <!-- Empty State -->
-        @empty($commercials)
-            <x-commercial.empty />
-        @endempty
 
     </section>
 </x-container>

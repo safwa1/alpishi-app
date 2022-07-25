@@ -29,19 +29,25 @@ class CommercialViewer extends Component
 
     public function previous()
     {
-        $this->currentMedia = MediableArrayHelper::previous($this->commercialMedia, $this->currentMediaIndex);
+        $this->currentMedia = MediableArrayHelper::previous(
+            $this->commercialMedia, $this->currentMediaIndex
+        );
     }
 
     public function next() {
-        $this->currentMedia = MediableArrayHelper::next($this->commercialMedia, $this->currentMediaIndex);
+        $this->currentMedia = MediableArrayHelper::next(
+            $this->commercialMedia, $this->currentMediaIndex
+        );
     }
 
     public function mount($id)
     {
         $this->whatsappUrl .= $id;
         $this->commercialId = is_numeric($id) ? $id : Hashed::new()->decode($id);
-        $this->commercial = Commercial::with('car', 'car.mediable', 'mediable')
-            ->firstWhere('id', $this->commercialId);
+        $this->commercial = Commercial::with('car', 'car.mediable', 'mediable')->firstWhere('id', $this->commercialId);
+        if(is_null($this->commercial)) {
+            abort(404);
+        }
         $this->commercialMedia = $this->commercial->toArray()['mediable'];
         $this->currentMedia = $this->commercialMedia[0];
     }

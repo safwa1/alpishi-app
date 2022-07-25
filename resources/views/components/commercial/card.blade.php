@@ -5,7 +5,8 @@
     'price',
     'releaseDate',
     'location',
-    'overflowText' => 'السعر شامل ثمن السيارة وتكاليف الشحن فقط'
+    'overflowText' => 'السعر شامل ثمن السيارة وتكاليف الشحن فقط',
+    'sold'
 ])
 
 @php
@@ -14,10 +15,19 @@
 @endphp
 
 <div {{ $attributes->merge(['class' => $classes]) }}>
+
+    @if($sold)
+        <div class="z-20 absolute -rotate-45 top-[10px] left-[-38px] px-10 py1 bg-red-500 backdrop-blur-sm">
+            <span class="text-sm text-white">
+                تم البيع
+            </span>
+        </div>
+    @endif
+
     <a href="{{ $url }}">
 
         <!-- image-container -->
-        <div class="relative overflow-hidden pb-[56.2%]">
+        <div class="relative overflow-hidden pb-[56.2%] bg-gray-300">
 
             <!-- image -->
             <img class="{{ $imageClasses }}" src="{{ $imageUrl }}" alt="سيارة" />

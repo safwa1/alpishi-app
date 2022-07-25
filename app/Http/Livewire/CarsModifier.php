@@ -170,7 +170,7 @@ class CarsModifier extends Component
                 if(!str($this->carPhoto)->contains($oldPath))
                 {
                     // store updated image and get url of it
-                    $path = $this->carPhoto->store('cars', 'public');
+                    $path = $this->carPhoto->store('cars', 'Website');
 
                     // update filetype in current mediable array
                     $mediable['type'] = FileUtil::typeOf($this->carPhoto);

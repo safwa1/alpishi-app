@@ -3,13 +3,12 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AuctionController;
 use App\Http\Controllers\LinksController;
-use App\Http\Controllers\MainController;
 use App\Http\Controllers\PurchaseMethodsController;
 use App\Http\Livewire\Commercials\CommercialsBrowser;
 use App\Http\Livewire\Commercials\CommercialViewer;
 use App\Http\Livewire\Commercials\CreateCommercial;
-use App\Http\Livewire\Home;
-use App\Http\Livewire\Public\ContactUsPage;
+use App\Http\Livewire\Website\ContactUsPage;
+use App\Http\Livewire\Website\Index;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,9 +23,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 // ======================================================= //
-// ====================== Public Routes ================== //
+// ====================== Website Routes ================== //
 // ======================================================= //
-Route::get('/', Home::class)->name('home');
+Route::get('/', Index::class)->name('home');
 Route::get('/contactus', ContactUsPage::class)->name('contactus');
 Route::get('/commercials', CommercialsBrowser::class)->name('commercials');
 Route::get('/view/commercial/{id}', CommercialViewer::class)->name('commercial');
@@ -35,7 +34,7 @@ Route::get('/auction', [AuctionController::class, 'index'])->name('auction');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 
 // ======================================================= //
-// ==================== End Public Routes ================ //
+// ==================== End Website Routes ================ //
 // ======================================================= //
 
 Route::middleware([

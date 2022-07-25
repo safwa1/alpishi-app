@@ -17,12 +17,12 @@
     {{--    --}}
 
     <div class="p-4">
-        <div class="w-full h-screen box-border bg-white overflow-hidden rounded-md relative">
-            <div class="w-full grid grid-cols-12 absolute inset-0 pb-4">
-                <div class="col-span-4 border-l overflow-hidden relative">
+        <div class="w-full h-screen box-border bg-white overflow-hidden rounded-xl relative">
+            <div class="w-full max-h-[40rem] grid grid-cols-12 absolute inset-0 pb-4">
+                <div class="sm:col-span-4 col-span-12 sm:border-l overflow-hidden relative">
                     <livewire:contact-us-control />
                 </div>
-                <div class="col-span-8">
+                <div class="sm:col-span-8 col-span-12">
                     <div class="p-6">
                         ...
                     </div>

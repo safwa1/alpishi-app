@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Public;
+namespace App\Http\Livewire\Website;
 
 use App\Models\ContactUs;
 use App\View\Components\HomeGuest;
@@ -51,6 +51,6 @@ class ContactUsPage extends Component
 
     public function render(): Factory|View|Application
     {
-        return view('livewire.public.contact-us')->layout(HomeGuest::class);
+        return view('livewire.website.contact-us')->layout(HomeGuest::class);
     }
 }

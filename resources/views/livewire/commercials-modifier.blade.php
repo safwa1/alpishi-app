@@ -21,12 +21,14 @@
                         <x-table.row>
 
                             <x-table.cell class="px-4 py-1 text-sm">
-                                @if(isset($commercial['car']['mediable']['path']))
-                                    <img
-                                        class="cursor-pointer w-10 h-10 overflow-hidden rounded-full object-cover hover:ring-2 ring-offset-1 hover:ring-red-200"
-                                        src="{{ \Illuminate\Support\Facades\Storage::url($commercial['car']['mediable']['path']) }}"
-                                        alt="car" />
-                                @endif
+                                <div class="cursor-pointer w-10 h-10 overflow-hidden rounded-full hover:ring-2 ring-offset-1 hover:ring-gray-200 bg-gray-300">
+                                    @if(isset($commercial['car']['mediable']['path']))
+                                        <img
+                                            class="w-full h-full object-cover"
+                                            src="{{ \Illuminate\Support\Facades\Storage::url($commercial['car']['mediable']['path']) }}"
+                                            alt="car" />
+                                    @endif
+                                </div>
                             </x-table.cell>
 
                             <x-table.cell>

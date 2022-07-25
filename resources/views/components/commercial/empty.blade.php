@@ -1,10 +1,12 @@
-@props(['message' => 'لا توجد أي عروض حالياً'])
+@props(['message' => 'القائمة فارغة!'])
 
 @php
-    $classes = 'w-full absolute h-full flex justify-center items-center rounded-2xl';
-    $messageClasses = 'text-center max-w-max font-bold text-2xl text-orange-500'
+    $classes = "w-full min-h-[30rem] overflow-hidden md:mb-2 mb-1 md:border-t-0 border-t flex items-center justify-center";
 @endphp
 
 <div {{ $attributes->merge(['class' => $classes]) }}>
-    <span class="{{ $messageClasses }}"> {{ $message }} </span>
+    <span class="w-full h-full text-center max-w-max font-bold text-xl text-error flex items-center flex-col gap-8">
+        <x-icons.empty-list />
+        {{ $message }}
+    </span>
 </div>
