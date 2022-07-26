@@ -22,9 +22,9 @@
                                 {{ $message['id'] }}#
                             </x-table.cell>
 
-                            <x-table.cell class="sm:min-w-fit min-w-[20rem]">
+                            <x-table.cell class="min-w-[12rem]">
                                 <span
-                                    class="max-w-[20rem] text-ellipsis overflow-hidden [-webkit-line-clamp:1] [display:-webkit-box] [-webkit-box-orient:vertical]"
+                                    class="max-w-[12rem] text-ellipsis overflow-hidden [-webkit-line-clamp:1] [display:-webkit-box] [-webkit-box-orient:vertical]"
                                     title="{{ $message['message'] }}">
                                     {{ $message['message'] }}
                                 </span>

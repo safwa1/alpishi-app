@@ -31,8 +31,8 @@
                                 </div>
                             </x-table.cell>
 
-                            <x-table.cell class="sm:min-w-fit min-w-[20rem]">
-                                <span class="max-w-[20rem] text-ellipsis overflow-hidden [-webkit-line-clamp:1] [display:-webkit-box] [-webkit-box-orient:vertical]">
+                            <x-table.cell>
+                                <span class="max-w-[12rem] text-ellipsis overflow-hidden [-webkit-line-clamp:1] [display:-webkit-box] [-webkit-box-orient:vertical]">
                                     @if(isset($commercial['car']['model']))
                                         {{ $commercial['car']['model'] }}
                                     @endif
