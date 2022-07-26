@@ -1,5 +1,5 @@
 @php
-    $classes = 'px-4 py-3';
+    $classes = 'px-4 py-3 whitespace-nowrap';
 @endphp
 
 <div></div>

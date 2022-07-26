@@ -7,10 +7,14 @@
     <meta name="og:site_name" content="البيشي للخدمات التجارية للوساطة في استيراد سيارات الديزل الكورية">
     <meta name="title" content="البيشي للخدمات التجارية للوساطة في استيراد سيارات الديزل الكورية">
     <meta property="og:title" content="البيشي للخدمات التجارية للوساطة في استيراد سيارات الديزل الكورية">
-    <meta property="og:image" content="{{ asset('media/logo.png') }}">
+    @if(request()->routeIs('commercials'))
+        <meta property="og:image" content="{{ \App\Http\Livewire\Commercials\CommercialViewer::$carCaverImage }}">
+    @else
+        <meta property="og:image" content="{{ asset('media/logo.png') }}">
+        <meta property="og:image:width" content="460">
+        <meta property="og:image:height" content="228">
+    @endif
     <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="436">
-    <meta property="og:image:height" content="228">
     <meta name="keywords" content="سيارات ديزل, سيارات مستعملة ,سيارات كورية ">
     <meta name="author" content="خالد البيشي">
     <meta name="robots" content="index, follow">

@@ -1,6 +1,6 @@
 <div
     class="overflow-hidden w-full m-auto bg-white py-2">
-    <div class="overflow-x-auto w-full">
+    <div class="overflow-x-auto w-full sm:scrollbar-default scrollbar-hide scroll-smooth">
         <table class="w-full whitespace-no-wrap">
             <thead>
             <tr

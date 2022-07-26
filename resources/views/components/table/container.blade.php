@@ -3,7 +3,7 @@
 @endphp
 
 <div {{ $attributes->merge(['class' => $classes]) }}>
-    <div class="overflow-x-auto w-full">
+    <div class="overflow-x-auto w-full sm:scrollbar-default scrollbar-hide scroll-smooth">
         {{ $slot }}
     </div>
 </div>

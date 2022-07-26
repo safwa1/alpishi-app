@@ -19,6 +19,8 @@ class CommercialViewer extends Component
     public array $currentMedia = [];
     public $currentMediaIndex = 0;
 
+    public static $carCaverImage;
+
     public $whatsappUrl = "https://wa.me/+966562100009?text=https://albishi9.com/view/commercial/";
 
     public function changeCurrentMedia($index)
@@ -50,6 +52,7 @@ class CommercialViewer extends Component
         }
         $this->commercialMedia = $this->commercial->toArray()['mediable'];
         $this->currentMedia = $this->commercialMedia[0];
+        self::$carCaverImage = $this->commercial->getCarImageUrl();
     }
 
     public function render(): Factory|View|Application
