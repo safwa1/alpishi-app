@@ -8,7 +8,7 @@
     <meta name="title" content="البيشي للخدمات التجارية للوساطة في استيراد سيارات الديزل الكورية">
     <meta property="og:title" content="البيشي للخدمات التجارية للوساطة في استيراد سيارات الديزل الكورية">
     @if(request()->routeIs('commercial'))
-        <meta property="og:image" content="{{ \App\Http\Livewire\Commercials\CommercialViewer::$carCaverImage }}">
+        <meta property="og:image" content="{{ asset(\App\Http\Livewire\Commercials\CommercialViewer::$carCaverImage) }}">
     @else
         <meta property="og:image" content="{{ asset('media/logo.png') }}">
         <meta property="og:image:width" content="460">

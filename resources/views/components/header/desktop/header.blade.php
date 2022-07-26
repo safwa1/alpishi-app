@@ -8,7 +8,7 @@
     </div>
 
     <div class="flex-1 overflow-hidden">
-        <img class="h-16 mx-auto" src="{{ asset('media/logo.png') }}" alt="Logo" />
+        <a href="{{ route('home') }}"><img class="h-16 mx-auto" src="{{ asset('media/logo.png') }}" alt="Logo" /></a>
     </div>
 
     <div class="flex-1 px-3">

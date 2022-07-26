@@ -2,7 +2,7 @@
     <div class="flex bg-white justify-around items-center w-full overflow-hidden max-h-[100px] h-[100px] px-6 py-2 gap-4">
 
         <div class="flex-2 overflow-hidden">
-            <img class="h-12" src="{{ asset('media/logo.png') }}" alt="Logo" />
+            <a href="{{ route('home') }}"><img class="h-12" src="{{ asset('media/logo.png') }}" alt="Logo" /></a>
         </div>
 
         <div class="flex-1 font-semibold text-xs text-[#0F6BA5] ">
