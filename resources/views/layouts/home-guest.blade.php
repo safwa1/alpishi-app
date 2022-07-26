@@ -2,11 +2,13 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="rtl" class="scroll-smooth">
 <head>
     <meta charset="utf-8">
+    <meta name="title" content="البيشي للخدمات التجارية للوساطة في استيراد سيارات الديزل الكورية">
     <meta name="description" content="مكتب خالد البيشي للخدمات التجارية نقدم لكم خبرتنا الطويلة لاكثر من ٣٥ عاما في مجال تجارة واستيراد السيارات والشاحنات والمعدات ، ونحرص على توفير طلباتكم من السيارات الكورية بالاسعار المناسبة ، والشراء مباشرةً من المزادات الكبيرة والمعتمدة في كوريا ، ونهتم باختيار افضل السيارات الخالية من الاعطال والحوادث ، والممشى الحقيقي للسيارات">
+
+    <meta property="og:title" content="البيشي للخدمات التجارية للوساطة في استيراد سيارات الديزل الكورية">
     <meta property="og:description" content="مكتب خالد البيشي للخدمات التجارية نقدم لكم خبرتنا الطويلة لاكثر من ٣٥ عاما في مجال تجارة واستيراد السيارات والشاحنات والمعدات ، ونحرص على توفير طلباتكم من السيارات الكورية بالاسعار المناسبة ، والشراء مباشرةً من المزادات الكبيرة والمعتمدة في كوريا ، ونهتم باختيار افضل السيارات الخالية من الاعطال والحوادث ، والممشى الحقيقي للسيارات">
     <meta name="og:site_name" content="البيشي للخدمات التجارية للوساطة في استيراد سيارات الديزل الكورية">
-    <meta name="title" content="البيشي للخدمات التجارية للوساطة في استيراد سيارات الديزل الكورية">
-    <meta property="og:title" content="البيشي للخدمات التجارية للوساطة في استيراد سيارات الديزل الكورية">
+
     @if(request()->routeIs('commercial'))
         <meta property="og:image" content="{{ asset(\App\Http\Livewire\Commercials\CommercialViewer::$carCaverImage) }}">
     @else
@@ -15,11 +17,23 @@
         <meta property="og:image:height" content="228">
     @endif
     <meta property="og:image:type" content="image/png">
-    <meta name="keywords" content="سيارات ديزل, سيارات مستعملة ,سيارات كورية ">
+
+    <meta name="keywords" content="خالد البيشي ,سيارات ديزل, سيارات مستعملة ,سيارات كورية, سيارات ديزل, مكتب خالد البيشي, البيشي لاستيراد السيارات الكورية">
     <meta name="author" content="خالد البيشي">
-    <meta name="robots" content="index, follow">
+    <!--<meta name="robots" content="index, follow">-->
+    <meta name="robots" content="noindex, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
+
+    <!-- for twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@Albishikhalid">
+    <meta name="twitter:creator" content="@Albishikhalid">
+    <meta name="twitter:url" content="https://twitter.com/Albishikhalid">
+    <meta name="twitter:title" content="البيشي لاستيراد السيارات الكورية">
+    <meta name="twitter:description" content="البيشي للخدمات التجارية للوساطة في استيراد سيارات الديزل الكورية">
+    <meta name="twitter:image" content="{{ asset('media/logo.png') }}">
+    <meta name="twitter:image:alt" content="شعار البيشي للخدمات التجارية للوساطة في استيراد سيارات الديزل الكورية">
 
     <title>البيشي للخدمات التجارية للوساطة في استيراد سيارات الديزل الكورية</title>
 
