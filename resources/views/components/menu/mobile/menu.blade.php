@@ -6,7 +6,7 @@
                 class="menu-button text-neutral-500 p-1.5 rounded-lg bg-gray-100/80">
                 <svg
                     x-data="{
-                    closed: 'M4 6h16M4 12h8m-8 6h16',//'M6 18L18 6M6 6l12 12',
+                    closed: 'M4 6h16M4 12h8m-8 6h16',
                     opened: 'M4 6h16M4 12h16m-7 6h7'
                     }"
                     @click="open = !open"
@@ -16,7 +16,7 @@
                     <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        d="open ? closed : opened" />
+                        :d="open ? closed : opened" />
                 </svg>
             </div>
             <div class="title text-sm text-[#0F6BA5]">
