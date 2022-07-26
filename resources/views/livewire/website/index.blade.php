@@ -5,6 +5,6 @@
     <x-commercial.latest :commercials="$latestCommercials" />
     <!-- purchase methods -->
     <x-purchase-methods.show />
-    <!-- inquiries, ask-us -->
+    <!-- inquiries, ask us -->
     <x-inquiries.show :phone-number="$phoneNumber"/>
 </div>
