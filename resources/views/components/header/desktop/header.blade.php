@@ -23,8 +23,8 @@
                 <label>
                     <input
                         type="text"
-                        class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pr-12 pl-20 ltr:pl-7 ltr:pr-12 sm:text-sm border-gray-300 rounded-full"
-                        placeholder="اسم السيارة او الموديل">
+                        class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pr-12 pl-20 ltr:pl-7 ltr:pr-12 sm:text-sm border-gray-300 rounded-full placeholder-gray-400"
+                        placeholder="البحث بإسم السيارة أو الموديل...">
                 </label>
                 <div class="absolute inset-y-0 right-0 flex items-center">
                     <div class="pr-3">
